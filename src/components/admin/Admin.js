@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 const Admin = () => {
   const [manageProduct,setManageProduct] = useState([])
    useEffect(()=>{
-     fetch("http://localhost:6060/products")
+     fetch("https://hidden-mesa-10060.herokuapp.com/products")
       .then((res) => res.json())
       .then((products) => {
         setManageProduct(products)
@@ -18,12 +18,12 @@ const Admin = () => {
   
   const deleteProduct=(id)=> {
     //console.log(id);
-      fetch(`http://localhost:6060/delete/${id}`,{
+      fetch(`https://hidden-mesa-10060.herokuapp.com/delete/${id}`,{
       method:'DELETE' 
   })
 
  .then(result =>{
-  fetch("http://localhost:6060/products")
+  fetch("https://hidden-mesa-10060.herokuapp.com/products")
   .then((res) => res.json())
   .then((products) => {
     setManageProduct(products)

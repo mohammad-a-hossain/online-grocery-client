@@ -13,7 +13,7 @@ const CheckOut = (props) => {
   const [selectItem, setSelectItem] = useState([])
  
   useEffect(()=>{
-        fetch('http://localhost:6060/products')
+        fetch('https://hidden-mesa-10060.herokuapp.com/products')
         .then(res =>res.json())
         .then(data =>setSelectItem(data)
          // console.log(data)
@@ -35,7 +35,7 @@ const CheckOut = (props) => {
       date: new Date().toDateString()
     };
     console.log(newOrder)
-    fetch(`http://localhost:6060/addOrder`, {
+    fetch(`https://hidden-mesa-10060.herokuapp.com/addOrder`, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(newOrder)

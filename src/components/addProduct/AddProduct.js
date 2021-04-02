@@ -22,7 +22,7 @@ const onSubmit = data => {
     price:data.price,
     imageURL: imageURL
   }; 
-  const url = `http://localhost:6060/addProducts`;
+  const url = `https://hidden-mesa-10060.herokuapp.com/addProducts`;
   
    fetch(url, {
     method: 'POST', 
@@ -32,7 +32,7 @@ const onSubmit = data => {
     body: JSON.stringify(eventData)
   })
   .then(res => console.log('server side response', res))
-  
+
 }; 
 
  const handleImageUpload = event => {

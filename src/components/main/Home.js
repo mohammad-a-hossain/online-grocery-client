@@ -9,7 +9,7 @@ const Home = () => {
 
   const [groceries, setGroceries] = useState([])
   useEffect(()=>{
-        fetch('http://localhost:6060/products')
+        fetch('https://hidden-mesa-10060.herokuapp.com/products')
         .then(res =>res.json())
         .then(data =>setGroceries(data)
           //console.log(data)
