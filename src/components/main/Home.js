@@ -2,6 +2,7 @@
 import { Container } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
 import Item from '../item/Item';
+import spinner from '../spinner/spinner.gif'
 
 
 const Home = () => {
@@ -14,15 +15,12 @@ const Home = () => {
           //console.log(data)
           )
   },[])
-/*   const [selectItems,setSelectItems] = useState([]) 
-  
-         const addItemHandler=(groItem)=>{
-          const newSelectItems= [...selectItems,groItem]
-          setSelectItems(newSelectItems) 
-       }  */
+
   return (
     <Container fluid className="row d-flex justify-content-center">
-   
+     {
+      groceries.length === 0 && <img src={spinner} alt="spinner" className="img-fluid"/>
+     }
      {
      groceries.map(groItem => <Item key={groItem._id} groItem={groItem} ></Item>)
      }

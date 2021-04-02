@@ -5,3 +5,4 @@
 # special of this project is firebase authentication
 # for database storing I used mongodb
 # buyer can purchase product from here and checkout
+# added spinner 
